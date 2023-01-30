@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function Employee(){
+      //   this.name='Arun'
+      //   this.id=101;
+
+      // }
+
+      // var Obj1= new Employee();
+      // Obj1.salary=100000;
+      // console.log(Obj1.salary);
+
+      function Employee() {
+        this.name = "Arun";
+        this.id = 101;
+      }
+
+      var Obj1 = new Employee();
+      Employee.prototype.salary = 100000;
+      console.log(Obj1.salary); //100000
+
+      var Obj2 = new Employee();
+
+      // Employee.prototype={
+      //   salary:50000
+      // }
+      
+      Employee.prototype.profile=function(){
+        console.log('Hi,Myself '+this.name+ 'and my ID is '+this.id)
+      }
+
+      Obj1.profile()
+      Obj2.profile()
+      
+      console.log(Employee._proto_)
+
+      // var Object={
+      //   name:'sahil'
+
+      // }
+      // console.log(Object
+    </script>
+</body>
+</html>
